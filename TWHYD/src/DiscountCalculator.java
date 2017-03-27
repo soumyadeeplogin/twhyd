@@ -1,10 +1,12 @@
 class DiscountCalculator {
 	
 	public int getDiscountedPrice(String brandName, String wearType, double cost){
-		
-		return 0;
+		double discount = getDiscount(brandName, wearType);
+		int finalPrice = calculateDiscount(discount, cost);
+		return finalPrice;
 	}
-	private double getDiscount(String brandName,String wearType){
+	
+	private double getDiscount(String brandName, String wearType){
 		InventoryHandler ih = new InventoryHandler();
 		double brandDiscount = ih.getBrandDiscount(brandName);
 		double catDiscount = ih.getCatDiscount(wearType);
