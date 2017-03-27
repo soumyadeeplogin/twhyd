@@ -36,7 +36,6 @@ public class StoreManager {
 			System.out.print("Line " + i + " :: ");
 			String inp =  sc.nextLine();
 			String[] str = inp.split(",");
-			str[1] = str[1].substring(1, str[1].length());
 			sm.priceIt(i, str[1],str[2],Double.parseDouble(str[3]));
 		}
 		
