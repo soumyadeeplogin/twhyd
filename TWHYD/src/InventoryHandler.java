@@ -35,10 +35,14 @@ class InventoryHandler {
 		return brandDiscount.get(brand);
 	}
 	
-	public double getAncestorCatDiscount(String item) {
-		if(ancCatDiscount.contains(item))
+	public double getAncestorCatDiscount(String wearType) {
+		if(ancCatDiscount.contains(wearType))
 			return new Double(0.50);
 		else
 			return new Double(0.00);
+	}
+	
+	public double getCatDiscount(String wearType) {
+		return catDiscount.get(wearType);
 	}
 }
