@@ -1,8 +1,6 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-import sun.util.locale.StringTokenIterator;
-
 public class StoreManager {
 	
 	private int finalPrice[];
