@@ -20,7 +20,7 @@ public class StoreManager {
 		int total = 0;
 		StringTokenizer st = new StringTokenizer(saleStream, ",");
 		while (st.hasMoreTokens()) {  
-	           total+=finalPrice[Integer.parseInt(st.nextToken())];
+	           total+=finalPrice[Integer.parseInt(st.nextToken())-1];
 	     }
 		System.out.println(total);
 	}
@@ -33,13 +33,14 @@ public class StoreManager {
 		StoreManager sm = new StoreManager(invSize);
 		sc.nextLine();
 		for(int i=0; i<invSize; i++){
-			System.out.print("Line " + i + " :: ");
+			System.out.print("Line " + (i+1) + " :: ");
 			String inp =  sc.nextLine();
 			String[] str = inp.split(",");
 			sm.priceIt(i, str[1],str[2],Double.parseDouble(str[3]));
 		}
 		
 		int custChoices = sc.nextInt();
+		sc.nextLine();
 		for(int i=0; i<custChoices; i++){
 			String inp = sc.nextLine();
 			sm.printIt(inp);
