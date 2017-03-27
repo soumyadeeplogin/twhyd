@@ -5,7 +5,7 @@ import sun.util.locale.StringTokenIterator;
 
 public class StoreManager {
 	
-	int finalPrice[];
+	private int finalPrice[];
 	
 	public StoreManager(int invSize) {
 		finalPrice = new int[invSize];
