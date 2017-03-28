@@ -1,6 +1,6 @@
 
 public class Printer {
-	public void printTicker(String source, String destination, int distance, double cost)
+	public void printTicker(String source, String destination, String distance, String cost)
 	{
 		System.out.println("*************************************************************");
 		System.out.println("			Hyderabad Metro Rail");
