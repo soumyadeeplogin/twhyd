@@ -9,7 +9,7 @@ public class InputHandler {
 		srcdsc[0] = sc.nextLine();
 		System.out.println("Enter Destination Station Code:");
 		srcdsc[1] = sc.nextLine();
-		return srcdsc;
-		
+		sc.close();
+		return srcdsc;		
 	}
 }
