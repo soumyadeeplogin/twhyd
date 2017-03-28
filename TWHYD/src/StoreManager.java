@@ -9,12 +9,12 @@ public class StoreManager {
 		finalPrice = new int[invSize];
 	}
 
-	private void priceIt(int ptr, String brandName, String wearType, double cost)
+	public void priceIt(int ptr, String brandName, String wearType, double cost)
 	{
 		finalPrice[ptr] = new DiscountCalculator().getDiscountedPrice(brandName, wearType, cost);
 	}
 	
-	private String printIt(String saleStream){
+	public String printIt(String saleStream){
 		int total = 0;
 		StringTokenizer st = new StringTokenizer(saleStream, ",");
 		while (st.hasMoreTokens()) {  
@@ -23,7 +23,7 @@ public class StoreManager {
 		return String.valueOf(total);
 	}
 	
-	public static void main(String args[])
+	/*public static void main(String args[])
 	{
 		Scanner sc = new Scanner(System.in);
 		//System.out.print("Inv :: ");
@@ -46,5 +46,5 @@ public class StoreManager {
 		}
 		System.out.println(result);
 		sc.close();
-	}	
+	}	*/
 }
